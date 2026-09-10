@@ -1,0 +1,27 @@
+name: supabase
+title: Supabase
+icon: supabase
+services:
+- name: postgres
+  title: Supabase PostgreSQL
+  service: supabase-postgres
+  required: true
+  options:
+  - version: '17'
+    default: true
+  volumes:
+  - name: data
+    size: 20
+- name: supabase
+  title: Supabase
+  service: supabase
+  required: true
+  main: true
+  links:
+  - name: db
+    service: postgres
+  volumes:
+  - name: storage
+    size: 10
+  - name: studio
+    size: 1
