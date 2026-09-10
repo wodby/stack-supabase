@@ -12,8 +12,6 @@ services:
   volumes:
   - name: data
     size: 20
-  - name: keys
-    size: 1
 - name: supabase
   title: Supabase
   service: supabase
