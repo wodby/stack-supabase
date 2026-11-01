@@ -2,7 +2,7 @@
 
 Self-hosted Supabase with dedicated PostgreSQL, Auth, REST, Realtime, Storage and Studio. Each app environment runs one Supabase project using the tested self-hosted/v0.8.1 component bundle.
 
-Supply the application site URL, sender address and SMTP integration when creating an environment. Wodby routes HTTPS to the Supabase gateway. Studio uses its generated dashboard password; client applications use the public URL and publishable API key.
+Supply the sender address and SMTP integration when creating an environment, and set the application site URL to your application's URL. Without it, email links and sign-in end on the public Supabase URL, which opens Studio. Wodby routes HTTPS to the Supabase gateway. Studio uses its generated dashboard password; client applications use the public URL and publishable API key.
 
 The default stack uses persistent filesystem storage and single-replica workloads. Optional S3 storage requires an existing bucket and an integration exposing the documented native AWS variables. Edge Functions, connection pooling, analytics and database HA are not included in the initial version.
 
